@@ -1,0 +1,116 @@
+@import "./App.css";
+
+:root {
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  color: #263634;
+  background: #f4f7f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-brand: #176b5b;
+  --color-brand-hover: #105747;
+  --color-brand-soft: #e8f2ef;
+  --color-text: #263634;
+  --color-muted: #61716e;
+  --color-border: #d7e1de;
+  --color-surface: #ffffff;
+  --color-page: #f4f7f6;
+  --color-danger: #a33d36;
+  --color-danger-soft: #fff0ee;
+  --color-success: #226748;
+  --color-success-soft: #eaf5ef;
+  --radius-sm: 6px;
+  --radius-md: 9px;
+  --shadow-card: 0 3px 12px rgb(26 52 46 / 7%);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--color-page);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--color-page);
+  background-image:
+    linear-gradient(rgb(247 250 248 / 58%), rgb(247 250 248 / 70%)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2400&q=85");
+  background-position: center, center;
+  background-size: cover, cover;
+  background-attachment: fixed, fixed;
+  color: var(--color-text);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  border: 0;
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #203b36;
+  font-family: inherit;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 32px !important;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 22px !important;
+}
+
+h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+a {
+  color: var(--color-brand);
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll, scroll;
+  }
+
+  h1 {
+    font-size: 27px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+}
