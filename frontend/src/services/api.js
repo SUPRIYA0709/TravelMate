@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000";
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? "http://localhost:5000" : "")).replace(/\/$/, "");
 const SESSION_KEY = "travelmate-session";
 
 function readSession() {
@@ -23,6 +23,10 @@ export async function apiRequest(path, options = {}) {
     }
 
     let response;
+    if (!API_BASE) {
+        throw new Error("TravelMate API is not configured for this deployment.");
+    }
+
     try {
         response = await fetch(`${API_BASE}${path}`, {
             ...requestOptions,

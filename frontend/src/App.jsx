@@ -25,7 +25,7 @@ import AdminBookings from "./pages/AdminBookings";
 import AdminReviews from "./pages/AdminReviews";
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <AuthProvider>
                 <Navbar />
                 <Routes>
